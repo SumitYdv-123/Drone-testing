@@ -1,8 +1,14 @@
 kind: pipeline
+type: ssh
 name: default
 
+server:
+  host: 15.206.66.223
+  user: Sssyadav123
+  password:
+    from_secret: password
+
 steps:
-- name: greetings
-  image: foobar/bazqux
+- name: greeting
   commands:
-  - echo bonjour monde
+  - echo hello world
