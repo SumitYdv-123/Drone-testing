@@ -1,9 +1,14 @@
-name: drone-test
 kind: pipeline
-type: docker
+type: ssh
+name: default
+
+server:
+  host: 15.206.66.223
+  user: Sssyadav123
+  password:
+    from_secret: password
 
 steps:
-- name: test
-  image: alpine
+- name: greeting
   commands:
-  - echo "It worked!"
+  - echo hello world
