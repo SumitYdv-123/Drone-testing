@@ -1,11 +1,17 @@
+---
 kind: pipeline
 type: ssh
 name: default
 
 server:
   host: 15.206.66.223
+  user: root
+  password:
+    from_secret: password
 
 steps:
 - name: greeting
   commands:
   - echo hello world
+
+...
