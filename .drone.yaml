@@ -1,17 +1,14 @@
 ---
 kind: pipeline
 type: ssh
-name: default
+name: drone-ssh-test
 
 server:
   host: 15.206.66.223
-  user: root
-  password:
-    from_secret: password
+  user: user_name
+  password: pass_word
 
 steps:
-- name: greeting
+- name: make folder
   commands:
-  - echo hello world
-
-...
+  - mkdir test-drone
