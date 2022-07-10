@@ -1,7 +1,8 @@
-pipeline:
-  build:
-    image: node:latest
-    commands: npm install
-  test:
-    image: node:latest
-    commands: npm run test
+kind: pipeline
+name: default
+steps:
+- name: frontend
+  image: node
+  commands:
+  - npm ci
+  - npm run test:unit
