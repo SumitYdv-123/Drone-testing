@@ -4,7 +4,8 @@ name: default
 
 server:
   host: 15.206.66.223
-  user: Sssyadav123
+  user: 
+    from_secret: Sssyadav123
   password:
     from_secret: password
 
