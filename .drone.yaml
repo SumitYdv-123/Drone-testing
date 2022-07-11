@@ -5,10 +5,10 @@ name: drone-ssh-test
 
 server:
   host: 15.206.66.223
-  user: user_name
-    from_secret: Sssyadav123
-  password: pass_word
-    from_secret: Sssyadav@123
+  user: 
+    from_secret: user_name
+  password: 
+    from_secret: pass_word
 
 steps:
 - name: make folder
