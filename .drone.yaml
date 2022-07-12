@@ -1,14 +1,14 @@
 ---
 kind: pipeline
-type: ssh
-name: drone-ssh-test
+type: docker
+name: default
 
-server:
-  host: 15.206.66.223
-  user: Sssyadav123
-  password: Sssyadav@123 
-    
 steps:
-- name: make folder
+- name: hello
+  image: busybox
   commands:
-  - mkdir test-drone
+  - echo hello world
+
+trigger:
+  branch:
+  - main
